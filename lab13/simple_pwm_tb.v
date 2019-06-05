@@ -27,6 +27,7 @@ end
 
 initial begin
     i_pwm_dc = 0;
+    i_pwm_en = 1'b0;
 
     repeat(10) @(negedge i_clk);
 

@@ -8,7 +8,7 @@ output reg          o_7seg_en;
 
 always @* begin
 
-    o_mux_ctrl = 2'b11;  // reding zeroes
+    o_mux_ctrl = 2'b11;  // reading zeroes
     o_mem_en   = 1'b0;
     o_led_en   = 1'b0;
     o_7seg_en  = 1'b0;

@@ -1,6 +1,6 @@
 main:       
         addi $2, $0, 0
-        addi $3, $0, 9
+        addi $3, $0, 10
         addi $4, $0, 0x989    # $4 = 0x989
         sll  $4, $4, 12       # $4 = $4 << 12 = 0x989000
         addi $4, $4, 0x680    # $4 = $4 + 0x680 = 0x989680 
@@ -10,7 +10,6 @@ main:
         addi $7, $7, 0x0040   # $7 = $7 + 0x0040 = 0x80000040 
 
 count_loop:            
-        addi $2, $2, 1        # $2 = $2 + 1
 
 # Display number
 
@@ -68,6 +67,8 @@ delay:
         j delay
 
 delay_end:
+
+        addi $2, $2, 1        # $2 = $2 + 1
 
         beq $2, $3, rst_cnt
         j count_loop
